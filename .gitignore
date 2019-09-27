@@ -4,3 +4,4 @@
 !ssh
 !passwd
 !group
+!fail2ban
