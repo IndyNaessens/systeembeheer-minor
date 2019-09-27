@@ -1,0 +1,9 @@
+[sshd]
+enabled = true
+port = 22345
+filter = sshd
+logpath = /var/log/auth.log
+findtime = 120
+maxretry = 5
+bantime = 300
+ignoreip = 193.191.177.6 193.191.177.148
