@@ -114,9 +114,13 @@ AcceptEnv LANG LC_*
 # override default of no subsystems
 Subsystem	sftp	/usr/lib/openssh/sftp-server
 
-# Example of overriding settings on a per-user basis
-#Match User anoncvs
-#	X11Forwarding no
-#	AllowTcpForwarding no
-#	PermitTTY no
-#	ForceCommand cvs server
+
+#own config
+AllowUsers root check
+
+Match User check
+	PasswordAuthentication no
+	AuthorizedKeysFile /etc/ssh/user_pk/user_check/authorized_keys
+
+Match User root
+	AuthorizedKeysFile /etc/ssh/user_pk/user_root/authorized_keys
