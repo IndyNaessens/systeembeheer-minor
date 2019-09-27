@@ -5,3 +5,4 @@
 !passwd
 !group
 !fail2ban
+!default
