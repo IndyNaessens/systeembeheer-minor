@@ -119,7 +119,7 @@ Subsystem	sftp	/usr/lib/openssh/sftp-server
 AllowUsers root check
 
 Match User check
-	AuthorizedKeysFile /etc/ssh/user_pk/user_check/authorized_keys
+	AuthorizedKeysFile /etc/ssh/authorized_keys_user_check
 
 Match User root
-	AuthorizedKeysFile /etc/ssh/user_pk/user_root/authorized_keys
+	AuthorizedKeysFile /etc/ssh/authorized_keys_user_root
