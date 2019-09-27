@@ -53,7 +53,7 @@ PermitRootLogin yes
 #IgnoreRhosts yes
 
 # To disable tunneled clear text passwords, change to no here!
-PasswordAuthentication yes
+PasswordAuthentication no
 #PermitEmptyPasswords no
 
 # Change to yes to enable challenge-response passwords (beware issues with
@@ -119,7 +119,6 @@ Subsystem	sftp	/usr/lib/openssh/sftp-server
 AllowUsers root check
 
 Match User check
-	PasswordAuthentication no
 	AuthorizedKeysFile /etc/ssh/authorized_keys_user_check
 
 Match User root
