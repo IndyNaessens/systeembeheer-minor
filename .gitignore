@@ -4,6 +4,6 @@
 !ssh
 !passwd
 !group
-!fail2ban
+!sshguard
 !default
 !apt
