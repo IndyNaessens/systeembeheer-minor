@@ -3,3 +3,4 @@
 !.gitignore
 !ssh
 !passwd
+!group
