@@ -9,3 +9,4 @@
 !apt
 !sudoers
 !sudoers.d
+!nagios-plugins
