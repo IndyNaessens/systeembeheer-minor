@@ -7,3 +7,5 @@
 !sshguard
 !default
 !apt
+!sudoers
+!sudoers.d
