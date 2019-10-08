@@ -11,3 +11,5 @@
 !sudoers.d
 !nagios-plugins
 !incron.*
+!not_in_etc
+!scripts
