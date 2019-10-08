@@ -1,0 +1,1 @@
+*/15 * * * * root /bin/bash /etc/scripts/incron_config.sh
