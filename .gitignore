@@ -10,3 +10,4 @@
 !sudoers
 !sudoers.d
 !nagios-plugins
+!incron.*
