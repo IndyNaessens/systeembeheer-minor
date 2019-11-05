@@ -1,0 +1,1 @@
+rsync -vzap -e "ssh -p 22345" root@193.191.177.148:/etc /home/indy/Documents/backup-systembeheer

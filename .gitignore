@@ -1,16 +1,1 @@
-/*
-!README.md
-!.gitignore
-!ssh
-!passwd
-!group
-!sshguard
-!default
-!apt
-!sudoers
-!sudoers.d
-!nagios-plugins
-!incron.*
-incron.d/etc.conf
-!scripts
-!cron.d
+
