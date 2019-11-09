@@ -1,6 +1,6 @@
 $TTL	1
 @	IN	SOA	ns.indy-naessens.sb.uclllabs.be. hostmaster.indy-naessens.sb.uclllabs.be. (
-			 111117		; Serial
+			 111118		; Serial
 			    300		; Refresh
 			  86400		; Retry
 			2419200		; Expire
@@ -19,3 +19,4 @@ ns	IN	A	193.191.177.148
 www	IN	A	193.191.177.148
 test	IN	A	193.191.177.254
 www1	IN	A	193.191.177.148
+www2	IN	A	193.191.177.148
