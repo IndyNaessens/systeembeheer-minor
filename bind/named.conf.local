@@ -6,3 +6,8 @@
 // organization
 //include "/etc/bind/zones.rfc1918";
 
+zone indy-naessens.sb.uclllabs.be. {
+	type master;
+	notify yes;
+	file "/etc/bind/zones/db.indy-naessens.sb.uclllabs.be";
+};
