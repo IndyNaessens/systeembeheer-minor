@@ -1,6 +1,6 @@
 $TTL	1
-@	IN	SOA	ns.indy-naessens.sb.uclllabs.be. hostmaster.indy-naessens.sb.uclllabs.be. (
-			 111120		; Serial
+@	IN	SOA	indy-naessens.sb.uclllabs.be. hostmaster.indy-naessens.sb.uclllabs.be. (
+			 111121		; Serial
 			    300		; Refresh
 			  86400		; Retry
 			2419200		; Expire
@@ -14,7 +14,6 @@ $TTL	1
 
 ; A records
 @	IN	A	193.191.177.148
-indy-naessens.sb.uclllabs.be.	IN	A	193.191.177.148
 ns	IN	A	193.191.177.148
 www	IN	A	193.191.177.148
 test	IN	A	193.191.177.254
@@ -24,6 +23,5 @@ secure	IN	A	193.191.177.148
 supersecure	IN	A	193.191.177.148
 
 ; CAA
-indy-naessens.sb.uclllabs.be.      IN  CAA 0 issue "letsencrypt.org"
-indy-naessens.sb.uclllabs.be.      IN  CAA 0 issuewild "letsencrypt.org"
-indy-naessens.sb.uclllabs.be.      IN  CAA 0 iodef "mailto:indy.naessens@pm.me"
+@	IN	CAA	0 issue "letsencrypt.org"
+@	IN	CAA	0 iodef "mailto:indy.naessens@student.ucll.be"
