@@ -15,3 +15,9 @@ zone indy-naessens.sb.uclllabs.be. {
 	193.191.177.4;	// ns2
 	};
 };
+
+zone ruben-vandekerckhove.sb.uclllabs.be. {
+    type slave;
+    file "/etc/bind/zones/db.ruben-vandekerckhove.sb.uclllabs.be";
+    masters { 193.191.177.174; };
+};
