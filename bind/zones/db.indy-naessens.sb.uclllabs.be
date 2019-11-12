@@ -1,6 +1,6 @@
 $TTL	1
 @	IN	SOA	ns.indy-naessens.sb.uclllabs.be. admin.indy-naessens.sb.uclllabs.be. (
-			 111129		; Serial
+			 111132		; Serial
 			    300		; Refresh
 			  86400		; Retry
 			2419200		; Expire
@@ -9,7 +9,6 @@ $TTL	1
 @       IN      NS      ns.indy-naessens.sb.uclllabs.be.
 @       IN      NS      ns1.uclllabs.be.
 @       IN      NS      ns2.uclllabs.be.
-			
 
 ; A records for name servers
 ns	IN	A	193.191.177.148
