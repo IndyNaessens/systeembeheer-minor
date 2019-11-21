@@ -1,0 +1,27 @@
+#!/bin/bash
+
+if [[ "$1" != "" ]]; then
+  domain="$1"
+else
+  echo "No domain given as first argument"
+  exit 0
+fi
+
+# make virtual host config
+echo "<VirtualHost *:80>
+    ServerName $domain
+    DocumentRoot /var/www/$domain
+    ErrorLog \${APACHE_LOG_DIR}/$domain-error.log
+    CustomLog \${APACHE_LOG_DIR}/$domain-access.log combined
+</VirtualHost>" >> $(echo "/etc/apache2/sites-available/$domain.conf")
+
+# make document root with index.html
+mkdir $(echo "/var/www/$domain")
+touch $(echo "/var/www/$domain/index.html")
+
+# append message to index.html
+echo "$domain" >> $(echo "/var/www/$domain/index.html")
+
+# enable site and reload apache2
+a2ensite $1
+systemctl reload apache2
