@@ -1,10 +1,10 @@
-$TTL	1
+$TTL	300
 @	IN	SOA	ns.indy-naessens.sb.uclllabs.be. admin.indy-naessens.sb.uclllabs.be. (
-		     1000005 ;Serial
+		     1000010 ;Serial
 			    300	;Refresh
 			  86400	;Retry
 			2419200	;Expire
-			  86400 );Negative Cache TTL
+			  300 );Negative Cache TTL
 ; Name servers
 @       IN      NS      ns.indy-naessens.sb.uclllabs.be.
 @       IN      NS      ns1.uclllabs.be.
