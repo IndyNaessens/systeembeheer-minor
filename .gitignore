@@ -1,4 +1,4 @@
-&apparmor.d
+apparmor.d
 incron.d/etc.conf
 mrt
 bind/zones/db.ruben-vandekerckhove.sb.uclllabs.be
