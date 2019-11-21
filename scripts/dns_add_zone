@@ -35,6 +35,11 @@ ns	IN	A	193.191.177.148" >> $(echo "/etc/bind/zones/db.mrt.$subdomain.indy-naess
 # delegation
 echo "$subdomain       IN      NS      ns.indy-naessens.sb.uclllabs.be." >> /etc/bind/zones/db.indy-naessens.sb.uclllabs.be
 
+# increase serial
+old=$(grep "Serial" /etc/bind/zones/db.indy-naessens.sb.uclllabs.be | tr -s [:blank:] | cut -d ' ' -f 2)
+new=$((old + 1))
+sed -i "s/.*Serial.*/\t\t     $new ;Serial/g" /etc/bind/zones/db.indy-naessens.sb.uclllabs.be
+
 #reload named.confs and zones
 rndc reconfig
 rndc reload
