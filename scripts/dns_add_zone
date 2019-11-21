@@ -12,7 +12,7 @@ echo "" >> /etc/bind/named.conf.mrt-zones
 echo "// $subdomain config"  >> /etc/bind/named.conf.mrt-zones
 echo "zone $subdomain.indy-naessens.sb.uclllabs.be. {
 	type master;
-	file \"/etc/bind/mrt-zones/db.$subdomain.indy-naessens.sb.uclllabs.be\";
+	file \"/etc/bind/zones/db.mrt.$subdomain.indy-naessens.sb.uclllabs.be\";
 };" >> /etc/bind/named.conf.mrt-zones
 
 # create zonefile
@@ -30,7 +30,7 @@ echo "\$TTL	300
 
 ; A records
 @	IN	A	193.191.177.148
-ns	IN	A	193.191.177.148" >> $(echo "/etc/bind/mrt-zones/db.$subdomain.indy-naessens.sb.uclllabs.be")
+ns	IN	A	193.191.177.148" >> $(echo "/etc/bind/zones/db.mrt.$subdomain.indy-naessens.sb.uclllabs.be")
 
 # delegation
 
