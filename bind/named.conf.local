@@ -23,3 +23,5 @@ zone ruben-vandekerckhove.sb.uclllabs.be. {
     file "/etc/bind/zones/db.ruben-vandekerckhove.sb.uclllabs.be";
     masters { 193.191.177.174; };
 };
+
+include "/etc/bind/named.conf.mrt-zones";
