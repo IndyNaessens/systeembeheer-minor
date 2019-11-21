@@ -23,5 +23,5 @@ touch $(echo "/var/www/$domain/index.html")
 echo "welcome $(cat "$domain" | cut -d '.' -f 1-2)" >> $(echo "/var/www/$domain/index.html")
 
 # enable site and reload apache2
-a2ensite $1
+a2ensite $1 > /dev/null
 systemctl reload apache2
