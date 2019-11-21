@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# check if running as root
+if [ "$EUID" -ne 0 ]
+  then echo "Please run as root"
+  exit
+fi
+
+# get subdomain
 if [[ "$1" != "" ]]; then
   subdomain="$1"
 else
