@@ -9,10 +9,12 @@
 zone indy-naessens.sb.uclllabs.be. {
 	type master;
 	file "/etc/bind/zones/db.indy-naessens.sb.uclllabs.be";
+	notify yes;
 	allow-transfer 
 	{
 	193.191.176.254; // ns1
 	193.191.177.4;	// ns2
+	193.191.177.133;  //arthur
 	};
 };
 
