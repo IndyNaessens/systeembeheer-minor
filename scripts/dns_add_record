@@ -9,3 +9,6 @@ fi
 # get params after -t
 params=${@:2}
 python3 $(echo "/etc/scripts/dns_zone_helper.py $params")
+
+# reload zone
+rndc reload
