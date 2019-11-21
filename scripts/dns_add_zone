@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [[ "$1" != "" ]]; then
+  subdomain="$1"
+else
+  echo "No subdomain given as first argument"
+  exit 0
+fi
+
+echo $subdomain
