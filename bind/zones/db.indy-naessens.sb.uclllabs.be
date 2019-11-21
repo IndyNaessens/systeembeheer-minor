@@ -1,10 +1,10 @@
 $TTL	1
 @	IN	SOA	ns.indy-naessens.sb.uclllabs.be. admin.indy-naessens.sb.uclllabs.be. (
-			 129999		; Serial
-			    300		; Refresh
-			  86400		; Retry
-			2419200		; Expire
-			  86400 )	; Negative Cache TTL
+		     1000005 ;Serial
+			    300	;Refresh
+			  86400	;Retry
+			2419200	;Expire
+			  86400 );Negative Cache TTL
 ; Name servers
 @       IN      NS      ns.indy-naessens.sb.uclllabs.be.
 @       IN      NS      ns1.uclllabs.be.
@@ -36,4 +36,4 @@ mx	IN	A	193.191.177.148
 @	IN	CAA	0 issue "letsencrypt.org"
 @	IN	CAA	0 iodef "mailto:indy.naessens@student.ucll.be"
 
-; mrt 
+; mrt
