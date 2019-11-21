@@ -35,3 +35,5 @@ mx	IN	A	193.191.177.148
 ; CAA records
 @	IN	CAA	0 issue "letsencrypt.org"
 @	IN	CAA	0 iodef "mailto:indy.naessens@student.ucll.be"
+
+; mrt 
