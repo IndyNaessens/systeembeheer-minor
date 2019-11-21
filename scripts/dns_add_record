@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# check if -t is provided
+if [[ "$1" != "-t" ]]; then
+  echo "No -t option provided as first argument, $1 is given instead"
+  exit 0
+fi
+
+# get params after -t
+params=${@:2}
+echo "$params"
