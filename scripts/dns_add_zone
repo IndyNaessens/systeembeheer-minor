@@ -7,7 +7,7 @@ else
   exit 0
 fi
 
-#append subdomain to named.conf.mrt-zones
+# append subdomain to named.conf.mrt-zones
 echo "" >> /etc/bind/named.conf.mrt-zones
 echo "// $subdomain config"  >> /etc/bind/named.conf.mrt-zones
 echo "zone $subdomain.indy-naessens.sb.uclllabs.be. {
@@ -15,14 +15,14 @@ echo "zone $subdomain.indy-naessens.sb.uclllabs.be. {
 	file \"/etc/bind/mrt-zones/db.$subdomain.indy-naessens.sb.uclllabs.be\";
 };" >> /etc/bind/named.conf.mrt-zones
 
-#create zonefile
-echo "\$TTL	1
+# create zonefile
+echo "\$TTL	300
 @	IN	SOA	ns.$subdomain.indy-naessens.sb.uclllabs.be. admin.indy-naessens.sb.uclllabs.be. (
-			 111111		; Serial
+			    001		; Serial
 			    300		; Refresh
-			  86400		; Retry
+			    300		; Retry
 			2419200		; Expire
-			  86400 )	; Negative Cache TTL
+			    300)	; Negative Cache TTL
 ; Name servers
 @       IN      NS      ns.$subdomain.indy-naessens.sb.uclllabs.be.
 @       IN      NS      ns.indy-naessens.sb.uclllabs.be.
@@ -31,3 +31,10 @@ echo "\$TTL	1
 ; A records
 @	IN	A	193.191.177.148
 ns	IN	A	193.191.177.148" >> $(echo "/etc/bind/mrt-zones/db.$subdomain.indy-naessens.sb.uclllabs.be")
+
+# delegation
+
+
+#reload named.confs and zones
+# rndc reconfig
+# rndc reload
