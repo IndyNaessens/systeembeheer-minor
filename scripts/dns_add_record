@@ -8,4 +8,4 @@ fi
 
 # get params after -t
 params=${@:2}
-echo "$params"
+python3 $(echo "/etc/scripts/dns_zone_helper.py $params")
