@@ -47,6 +47,5 @@ old=$(grep "Serial" /etc/bind/zones/db.indy-naessens.sb.uclllabs.be | tr -s [:bl
 new=$((old + 1))
 sed -i "s/.*Serial.*/\t\t     $new ;Serial/g" /etc/bind/zones/db.indy-naessens.sb.uclllabs.be
 
-#reload named.confs and zones
-rndc reconfig
-rndc reload
+# restart bind9
+systemctl restart bind9

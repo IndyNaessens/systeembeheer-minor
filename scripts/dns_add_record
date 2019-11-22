@@ -16,5 +16,5 @@ fi
 params=${@:2}
 python3 $(echo "/etc/scripts/dns_zone_helper.py $params")
 
-# reload zone
-rndc reload
+# restart bind9
+systemctl restart bind9
