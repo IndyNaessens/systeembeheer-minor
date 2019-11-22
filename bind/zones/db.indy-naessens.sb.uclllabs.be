@@ -1,6 +1,6 @@
 $TTL	300
 @	IN	SOA	ns.indy-naessens.sb.uclllabs.be. admin.indy-naessens.sb.uclllabs.be. (
-		     1000010 ;Serial
+		     1000115 ;Serial
 			    300	;Refresh
 			  86400	;Retry
 			2419200	;Expire
@@ -37,3 +37,4 @@ mx	IN	A	193.191.177.148
 @	IN	CAA	0 iodef "mailto:indy.naessens@student.ucll.be"
 
 ; mrt
+subzonedahx4x       IN      NS      ns.indy-naessens.sb.uclllabs.be.
