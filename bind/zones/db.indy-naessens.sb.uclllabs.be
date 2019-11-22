@@ -1,6 +1,6 @@
 $TTL	300
 @	IN	SOA	ns.indy-naessens.sb.uclllabs.be. admin.indy-naessens.sb.uclllabs.be. (
-		     1000115 ;Serial
+		     1001111 ;Serial
 			    300	;Refresh
 			  86400	;Retry
 			2419200	;Expire
