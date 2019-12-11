@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Functions
+start () {
+  echo "Starting firewall"
+}
+
+stop () {
+  echo "Stopping firewall"
+}
+
+# Program Enty
+action=$1
+
+if [ "$action" = "start" ]; then
+  start
+elif [ "$action" = "stop" ]; then
+  stop
+elif [ "$action" = "restart"  ]; then
+  stop
+  start
+else
+  echo "Parameters: {start|stop|restart}"
+fi
