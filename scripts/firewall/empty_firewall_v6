@@ -1,0 +1,7 @@
+*filter
+:INPUT ACCEPT [6926:17389966]
+:FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [3008:283597]
+:sshguard - [0:0]
+-A INPUT -j sshguard
+COMMIT

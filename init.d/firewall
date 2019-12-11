@@ -6,7 +6,8 @@ start () {
 }
 
 stop () {
-  echo "Stopping firewall"
+  iptables-restore /etc/scripts/firewall/empty_firewall_v4 -v
+  ip6tables-restore /etc/scripts/firewall/empty_firewall_v6 -v
 }
 
 # Program Enty
