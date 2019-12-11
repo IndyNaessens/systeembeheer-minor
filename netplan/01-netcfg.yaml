@@ -1,1 +1,10 @@
-
+network:
+  version: 2
+  renderer: "networkd"
+  ethernets:
+   eth0:
+    addresses:
+    - "193.191.177.148/25"
+    - "2001:6a8:2880:a077::94/64"
+    gateway6:  "2001:6a8:2880:a077::1"
+    gateway4:  "193.191.177.254"
