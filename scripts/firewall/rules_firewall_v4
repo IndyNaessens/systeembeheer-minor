@@ -5,6 +5,9 @@
 -N sshguard
 -A INPUT -j sshguard
 -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+
+# permit tcp ports 25,80,443,587,993,22345 from everywhere
+# permit udp/tcp ports 53 from everywhere
 -A INPUT -p tcp -m tcp --dport 25 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
@@ -13,5 +16,24 @@
 -A INPUT -p tcp -m tcp --dport 22345 -j ACCEPT
 -A INPUT -p tcp -m tcp --dport 53 -j ACCEPT
 -A INPUT -p udp -m udp --dport 53 -j ACCEPT
+
+# permit everything from 10.0.0.0/8, 192.168.255.0/24 and 172.16.0.0/16
+-A INPUT -s 10.0.0.0/8 -j ACCEPT
+-A INPUT -s 192.168.255.0/24 -j ACCEPT
+-A INPUT -s 172.16.0.0/16 -j ACCEPT
+
+# permit everything from mrt and leia
+-A INPUT -s 193.191.177.6/25 -j ACCEPT
+-A INPUT -s 193.191.177.1/25 -j ACCEPT
+
+# permit icmp echo-reply from everywhere
+-A INPUT -p icmp -m icmp --icmp-type 8 -j ACCEPT
+
+# disable ip routin
+-A FORWARD -j REJECT --reject-with icmp-port-unreachable
+
+# enable tcp syn cookies
+# ???
+
 -A OUTPUT -j ACCEPT
 COMMIT
