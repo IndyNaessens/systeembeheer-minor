@@ -15,6 +15,12 @@ action=$1
 
 if [ "$action" = "start" ]; then
   start
+
+  # disable ip routing
+  sysctl -w net.ipv4.ip_forward=0 # default
+
+  # enable tcp syn cookies
+  sysctl -w net.ipv4.tcp_syncookies=1 # default
 elif [ "$action" = "stop" ]; then
   stop
 elif [ "$action" = "restart"  ]; then
