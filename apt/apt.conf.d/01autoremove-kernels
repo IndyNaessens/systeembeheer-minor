@@ -2,57 +2,80 @@
 APT::NeverAutoRemove
 {
    "^linux-image-4\.15\.0-70-generic$";
+   "^linux-image-4\.15\.0-72-generic$";
    "^linux-image-4\.15\.18-15-pve$";
    "^linux-headers-4\.15\.0-70-generic$";
+   "^linux-headers-4\.15\.0-72-generic$";
    "^linux-headers-4\.15\.18-15-pve$";
    "^linux-image-extra-4\.15\.0-70-generic$";
+   "^linux-image-extra-4\.15\.0-72-generic$";
    "^linux-image-extra-4\.15\.18-15-pve$";
    "^linux-modules-4\.15\.0-70-generic$";
+   "^linux-modules-4\.15\.0-72-generic$";
    "^linux-modules-4\.15\.18-15-pve$";
    "^linux-modules-extra-4\.15\.0-70-generic$";
+   "^linux-modules-extra-4\.15\.0-72-generic$";
    "^linux-modules-extra-4\.15\.18-15-pve$";
    "^linux-signed-image-4\.15\.0-70-generic$";
+   "^linux-signed-image-4\.15\.0-72-generic$";
    "^linux-signed-image-4\.15\.18-15-pve$";
    "^linux-image-unsigned-4\.15\.0-70-generic$";
+   "^linux-image-unsigned-4\.15\.0-72-generic$";
    "^linux-image-unsigned-4\.15\.18-15-pve$";
    "^kfreebsd-image-4\.15\.0-70-generic$";
+   "^kfreebsd-image-4\.15\.0-72-generic$";
    "^kfreebsd-image-4\.15\.18-15-pve$";
    "^kfreebsd-headers-4\.15\.0-70-generic$";
+   "^kfreebsd-headers-4\.15\.0-72-generic$";
    "^kfreebsd-headers-4\.15\.18-15-pve$";
    "^gnumach-image-4\.15\.0-70-generic$";
+   "^gnumach-image-4\.15\.0-72-generic$";
    "^gnumach-image-4\.15\.18-15-pve$";
    "^.*-modules-4\.15\.0-70-generic$";
+   "^.*-modules-4\.15\.0-72-generic$";
    "^.*-modules-4\.15\.18-15-pve$";
    "^.*-kernel-4\.15\.0-70-generic$";
+   "^.*-kernel-4\.15\.0-72-generic$";
    "^.*-kernel-4\.15\.18-15-pve$";
    "^linux-backports-modules-.*-4\.15\.0-70-generic$";
+   "^linux-backports-modules-.*-4\.15\.0-72-generic$";
    "^linux-backports-modules-.*-4\.15\.18-15-pve$";
    "^linux-modules-.*-4\.15\.0-70-generic$";
+   "^linux-modules-.*-4\.15\.0-72-generic$";
    "^linux-modules-.*-4\.15\.18-15-pve$";
    "^linux-tools-4\.15\.0-70-generic$";
+   "^linux-tools-4\.15\.0-72-generic$";
    "^linux-tools-4\.15\.18-15-pve$";
    "^linux-cloud-tools-4\.15\.0-70-generic$";
+   "^linux-cloud-tools-4\.15\.0-72-generic$";
    "^linux-cloud-tools-4\.15\.18-15-pve$";
    "^linux-buildinfo-4\.15\.0-70-generic$";
+   "^linux-buildinfo-4\.15\.0-72-generic$";
    "^linux-buildinfo-4\.15\.18-15-pve$";
    "^linux-source-4\.15\.0-70-generic$";
+   "^linux-source-4\.15\.0-72-generic$";
    "^linux-source-4\.15\.18-15-pve$";
 };
 /* Debug information:
 # dpkg list:
-iF  linux-image-4.15.0-70-generic         4.15.0-70.79                      amd64        Signed kernel image generic
-ii  linux-image-generic                   4.15.0.70.72                      amd64        Generic Linux kernel image
+ii  linux-image-4.15.0-70-generic         4.15.0-70.79                                    amd64        Signed kernel image generic
+iF  linux-image-4.15.0-72-generic         4.15.0-72.81                                    amd64        Signed kernel image generic
+ii  linux-image-generic                   4.15.0.72.74                                    amd64        Generic Linux kernel image
 # list of installed kernel packages:
 4.15.0-70-generic 4.15.0-70.79
+4.15.0-72-generic 4.15.0-72.81
 # list of different kernel versions:
+4.15.0-72.81
 4.15.0-70.79
-# Installing kernel: 4.15.0-70.79 (4.15.0-70-generic)
+# Installing kernel: 4.15.0-72.81 (4.15.0-72-generic)
 # Running kernel: ignored (4.15.18-15-pve)
-# Last kernel: 4.15.0-70.79
-# Previous kernel: 
+# Last kernel: 4.15.0-72.81
+# Previous kernel: 4.15.0-70.79
 # Kernel versions list to keep:
 4.15.0-70.79
+4.15.0-72.81
 # Kernel packages (version part) to protect:
 4\.15\.0-70-generic
+4\.15\.0-72-generic
 4\.15\.18-15-pve
 */

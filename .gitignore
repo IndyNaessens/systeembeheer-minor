@@ -2,6 +2,7 @@ apparmor.d
 incron.d/etc.conf
 mrt
 bind/zones/db.ruben-vandekerckhove.sb.uclllabs.be
+bind/zones/db.pieterjan-vanderschueren.sb.uclllabs.be
 bind/named.conf.mrt-zones
 apache2/sites-available/*subzone*
 apache2/sites-enabled/*subzone*

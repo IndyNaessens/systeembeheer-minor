@@ -25,4 +25,10 @@ zone ruben-vandekerckhove.sb.uclllabs.be. {
     masters { 193.191.177.174; };
 };
 
+zone pieterjan-vanderschueren.sb.uclllabs.be. {
+    type slave;
+    file "/etc/bind/zones/db.pieterjan-vanderschueren.sb.uclllabs.be";
+    masters { 193.191.177.167; };
+};
+
 include "/etc/bind/named.conf.mrt-zones";
