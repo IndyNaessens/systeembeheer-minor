@@ -25,7 +25,7 @@
 -A INPUT -s 2001:6a8:2880:a021::1/64 -j ACCEPT
 
 # permit icmp echo-reply from everywhere
--A INPUT -p icmp -m icmp --icmp-type 8 -j ACCEPT
+-A INPUT -p ipv6-icmp -j ACCEPT
 
 -A OUTPUT -j ACCEPT
 COMMIT
