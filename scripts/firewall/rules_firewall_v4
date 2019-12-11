@@ -29,11 +29,5 @@
 # permit icmp echo-reply from everywhere
 -A INPUT -p icmp -m icmp --icmp-type 8 -j ACCEPT
 
-# disable ip routin
--A FORWARD -j REJECT --reject-with icmp-port-unreachable
-
-# enable tcp syn cookies
-# ???
-
 -A OUTPUT -j ACCEPT
 COMMIT
