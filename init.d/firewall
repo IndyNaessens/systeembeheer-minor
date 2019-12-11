@@ -1,11 +1,12 @@
 #!/bin/bash
 
 # Functions
-start () {
-  echo "Starting firewall"
+start_iptables_rules () {
+  iptables-restore /etc/scripts/firewall/rules_firewall_v4 -v
+  ip6tables-restore /etc/scripts/firewall/rules_firewall_v6 -v
 }
 
-stop () {
+stop_iptables_rules () {
   iptables-restore /etc/scripts/firewall/empty_firewall_v4 -v
   ip6tables-restore /etc/scripts/firewall/empty_firewall_v6 -v
 }
@@ -14,7 +15,7 @@ stop () {
 action=$1
 
 if [ "$action" = "start" ]; then
-  start
+  start_iptables_rules
 
   # disable ip routing
   sysctl -w net.ipv4.ip_forward=0 # default
@@ -22,10 +23,10 @@ if [ "$action" = "start" ]; then
   # enable tcp syn cookies
   sysctl -w net.ipv4.tcp_syncookies=1 # default
 elif [ "$action" = "stop" ]; then
-  stop
+  stop_iptables_rules
 elif [ "$action" = "restart"  ]; then
-  stop
-  start
+  stop_iptables_rules
+  start_iptables_rules
 else
   echo "Parameters: {start|stop|restart}"
 fi
