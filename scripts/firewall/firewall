@@ -18,7 +18,8 @@ if [ "$action" = "start" ]; then
   start_iptables_rules
 
   # disable ip routing
-  sysctl -w net.ipv4.ip_forward=0 # default
+  sysctl -w net.ipv4.ip_forward=0 # default = 0
+  sysctl -w net.ipv6.conf.all.forwarding=0 # default = 1
 
   # enable tcp syn cookies
   sysctl -w net.ipv4.tcp_syncookies=1 # default
