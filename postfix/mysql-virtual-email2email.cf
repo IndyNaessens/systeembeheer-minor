@@ -1,5 +1,5 @@
 user = mailuser
 password = 0078910Mail.0
-hosts = 127.0.0.1
+hosts = localhost
 dbname = mailserver
 query = SELECT email FROM virtual_users WHERE email='%s'
