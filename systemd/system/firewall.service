@@ -1,0 +1,13 @@
+[Unit]
+Description=Own firewall rules after network is up
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/etc/scripts/firewall/firewall start
+ExecStop=/etc/scripts/firewall/firewall stop
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
