@@ -23,8 +23,8 @@
 -A INPUT -s 172.16.0.0/16 -j ACCEPT
 
 # permit everything from mrt and leia
--A INPUT -s 193.191.177.6/25 -j ACCEPT
--A INPUT -s 193.191.177.1/25 -j ACCEPT
+-A INPUT -s 193.191.177.6/32 -j ACCEPT
+-A INPUT -s 193.191.177.1/32 -j ACCEPT
 
 # permit icmp echo-reply from everywhere
 -A INPUT -p icmp -m icmp --icmp-type 8 -j ACCEPT
