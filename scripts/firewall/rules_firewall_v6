@@ -27,5 +27,8 @@
 # permit icmp echo-reply from everywhere
 -A INPUT -p ipv6-icmp -j ACCEPT
 
+# permit loopback
+-A INPUT -i lo -j ACCEPT
+
 -A OUTPUT -j ACCEPT
 COMMIT

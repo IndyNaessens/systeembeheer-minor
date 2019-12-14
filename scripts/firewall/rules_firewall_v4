@@ -29,5 +29,8 @@
 # permit icmp echo-reply from everywhere
 -A INPUT -p icmp -m icmp --icmp-type 8 -j ACCEPT
 
+# permist loopback
+-A INPUT -i lo -j ACCEPT
+
 -A OUTPUT -j ACCEPT
 COMMIT
